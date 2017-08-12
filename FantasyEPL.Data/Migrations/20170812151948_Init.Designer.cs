@@ -7,10 +7,11 @@ using FantasyEPL.Data;
 
 namespace FantasyEPL.Data.Migrations
 {
-    [DbContext(typeof(FantasyEPLContext))]
-    partial class FantasyEPLContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(FPLContext))]
+    [Migration("20170812151948_Init")]
+    partial class Init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")

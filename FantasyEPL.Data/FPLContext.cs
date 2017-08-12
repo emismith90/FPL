@@ -1,13 +1,13 @@
 ﻿using System.IO;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Antares.Essentials.Data.Extensions;
 using FantasyEPL.Data.Entities;
-using FantasyEPL.Data.Extensions;
 using FantasyEPL.Data.TypeBuilders;
 
 namespace FantasyEPL.Data
 {
-    public class FantasyEPLContext : DbContext
+    public class FPLContext : DbContext
     {
         public DbSet<EventEntity> Events { get; set; }
         public DbSet<TeamEntity> Teams { get; set; }

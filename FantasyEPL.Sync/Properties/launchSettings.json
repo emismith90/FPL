@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FantasyEPL.Sync": {
+      "commandName": "Project",
+      "commandLineArgs": "-f \"C:\\Users\\hungl\\Documents\\Projects\\FPL\\FantasyEPL.Sync\\seed\\week_0\\bootstrap-static.json\""
+    }
+  }
+}

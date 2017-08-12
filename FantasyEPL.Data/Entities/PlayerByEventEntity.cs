@@ -1,4 +1,6 @@
-﻿namespace FantasyEPL.Data.Entities
+﻿using Antares.Essentials.Data.Entities;
+
+namespace FantasyEPL.Data.Entities
 {
     public class PlayerByEventEntity : EntityBase
     {

@@ -9,15 +9,25 @@
     <Content Include="appsettings.json">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Include="sample\week 0\bootstrap-dynamic.json">
+    <Content Include="seed\week_0\bootstrap-dynamic.json">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Include="sample\week 0\bootstrap-static.json">
+    <Content Include="seed\week_0\bootstrap-static.json">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Include="sample\week 0\element-summary.json">
+    <Content Include="seed\week_0\element-summary.json">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Antares.Essentials" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="1.1.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="System.Runtime.Serialization.Json" Version="4.3.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.2" />
   </ItemGroup>
 
   <ItemGroup>
