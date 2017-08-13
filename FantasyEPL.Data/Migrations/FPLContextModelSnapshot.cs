@@ -18,8 +18,7 @@ namespace FantasyEPL.Data.Migrations
 
             modelBuilder.Entity("FantasyEPL.Data.Entities.EventEntity", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("Id");
 
                     b.Property<int?>("AverageEntryScore");
 
@@ -100,19 +99,19 @@ namespace FantasyEPL.Data.Migrations
 
                     b.Property<int?>("CostChangeStartFall");
 
-                    b.Property<double>("Creativity")
+                    b.Property<decimal>("Creativity")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("decimal(7, 1)")
-                        .HasDefaultValue(0.0);
+                        .HasDefaultValue(0m);
 
                     b.Property<int?>("DreamteamCount");
 
                     b.Property<int?>("EAIndex");
 
-                    b.Property<double?>("EpNext")
+                    b.Property<decimal?>("EpNext")
                         .HasColumnType("decimal(7, 1)");
 
-                    b.Property<double?>("EpThis")
+                    b.Property<decimal?>("EpThis")
                         .HasColumnType("decimal(7, 1)");
 
                     b.Property<int>("EventId");
@@ -121,10 +120,10 @@ namespace FantasyEPL.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasDefaultValue(0);
 
-                    b.Property<double>("Form")
+                    b.Property<decimal>("Form")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("decimal(7, 1)")
-                        .HasDefaultValue(0.0);
+                        .HasDefaultValue(0m);
 
                     b.Property<int>("GoalsConceded")
                         .ValueGeneratedOnAdd()
@@ -134,17 +133,17 @@ namespace FantasyEPL.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasDefaultValue(0);
 
-                    b.Property<double>("ICTIndex")
+                    b.Property<decimal>("ICTIndex")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("decimal(7, 1)")
-                        .HasDefaultValue(0.0);
+                        .HasDefaultValue(0m);
 
                     b.Property<bool?>("InDreamteam");
 
-                    b.Property<double>("Influence")
+                    b.Property<decimal>("Influence")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("decimal(7, 1)")
-                        .HasDefaultValue(0.0);
+                        .HasDefaultValue(0m);
 
                     b.Property<int?>("LoanedIn");
 
@@ -178,10 +177,10 @@ namespace FantasyEPL.Data.Migrations
 
                     b.Property<int>("PlayerId");
 
-                    b.Property<double>("PointsPerGame")
+                    b.Property<decimal>("PointsPerGame")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("decimal(7, 1)")
-                        .HasDefaultValue(0.0);
+                        .HasDefaultValue(0m);
 
                     b.Property<int>("PositionId");
 
@@ -193,10 +192,10 @@ namespace FantasyEPL.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasDefaultValue(0);
 
-                    b.Property<double>("SelectedByPercent")
+                    b.Property<decimal>("SelectedByPercent")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("decimal(7, 1)")
-                        .HasDefaultValue(0.0);
+                        .HasDefaultValue(0m);
 
                     b.Property<bool?>("Special");
 
@@ -209,10 +208,10 @@ namespace FantasyEPL.Data.Migrations
 
                     b.Property<int>("TeamId");
 
-                    b.Property<double>("Threat")
+                    b.Property<decimal>("Threat")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("decimal(7, 1)")
-                        .HasDefaultValue(0.0);
+                        .HasDefaultValue(0m);
 
                     b.Property<int>("TotalPoints")
                         .ValueGeneratedOnAdd()
@@ -226,10 +225,10 @@ namespace FantasyEPL.Data.Migrations
 
                     b.Property<int?>("TransfersOutEvent");
 
-                    b.Property<double?>("ValueForm")
+                    b.Property<decimal?>("ValueForm")
                         .HasColumnType("decimal(7, 1)");
 
-                    b.Property<double?>("ValueSeason")
+                    b.Property<decimal?>("ValueSeason")
                         .HasColumnType("decimal(7, 1)");
 
                     b.Property<int>("YellowCards")
@@ -252,8 +251,7 @@ namespace FantasyEPL.Data.Migrations
 
             modelBuilder.Entity("FantasyEPL.Data.Entities.PlayerEntity", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("Id");
 
                     b.Property<int>("Code");
 
@@ -280,8 +278,7 @@ namespace FantasyEPL.Data.Migrations
 
             modelBuilder.Entity("FantasyEPL.Data.Entities.PlayerPositionEntity", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("Id");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -305,10 +302,10 @@ namespace FantasyEPL.Data.Migrations
 
                     b.Property<int>("EventId");
 
-                    b.Property<double>("Form")
+                    b.Property<decimal>("Form")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("decimal(7, 1)")
-                        .HasDefaultValue(0.0);
+                        .HasDefaultValue(0m);
 
                     b.Property<int>("GameDraw")
                         .ValueGeneratedOnAdd()
@@ -362,8 +359,7 @@ namespace FantasyEPL.Data.Migrations
 
             modelBuilder.Entity("FantasyEPL.Data.Entities.TeamEntity", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("Id");
 
                     b.Property<int>("Code");
 

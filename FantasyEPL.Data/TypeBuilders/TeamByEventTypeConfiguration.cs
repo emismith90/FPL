@@ -1,11 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Antares.Essentials.Data.TypeBuilders;
 using FantasyEPL.Data.Entities;
 
 namespace FantasyEPL.Data.TypeBuilders
 {
-    public class TeamByEventTypeConfiguration : EntityTypeConfiguration<TeamByEventEntity>
+    public class TeamByEventTypeConfiguration : FPLEntityTypeConfiguration<TeamByEventEntity>
     {
         public override void Configure(EntityTypeBuilder<TeamByEventEntity> builder)
         {

@@ -1,11 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Antares.Essentials.Data.TypeBuilders;
 using FantasyEPL.Data.Entities;
 
 namespace FantasyEPL.Data.TypeBuilders
 {
-    public class PlayerPositionTypeConfiguration : EntityTypeConfiguration<PlayerPositionEntity>
+    public class PlayerPositionTypeConfiguration : FPLEntityTypeConfiguration<PlayerPositionEntity>
     {
         public override void Configure(EntityTypeBuilder<PlayerPositionEntity> builder)
         {

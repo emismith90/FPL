@@ -3,8 +3,8 @@ using System.Threading.Tasks;
 
 namespace FantasyEPL.Sync.Services
 {
-    public interface IFPLDataProvider
+    public interface IFPLDataProviderService
     {
-        Task<Static> GetStaticData();
+        Task<Static> GetStaticDataAsync();
     }
 }

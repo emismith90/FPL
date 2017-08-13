@@ -2,7 +2,7 @@
 
 namespace FantasyEPL.Data
 {
-    public class FPLUnitOfWork : UnitOfWork
+    public class FPLUnitOfWork : UnitOfWork, IUnitOfWork
     {
         public FPLUnitOfWork(FPLContext context) : base(context)
         {

@@ -3,18 +3,18 @@ using FantasyEPL.Sync.Configurations;
 
 namespace FantasyEPL.Sync.Services
 {
-    public class LiveFPLDataProvider : FPLDataProvider, IFPLDataProvider
+    public class LiveFPLDataProviderService : FPLDataProviderService, IFPLDataProviderService
     {
         public readonly FPLHttpClient HttpClient;
         public readonly OverTheWireOptions Options;
 
-        public LiveFPLDataProvider(FPLHttpClient httpClient, OverTheWireOptions options)
+        public LiveFPLDataProviderService(FPLHttpClient httpClient, OverTheWireOptions options)
         {
             HttpClient = httpClient;
             Options = options;
         }
 
-        protected override async Task<string> GetRawData()
+        protected override async Task<string> GetRawDataAsync()
         {
             try
             { 

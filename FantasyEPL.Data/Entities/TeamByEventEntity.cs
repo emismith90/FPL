@@ -20,7 +20,7 @@ namespace FantasyEPL.Data.Entities
         public int? StrengthAttackAway { get; set; }
         public int? StrengthDefenceHome { get; set; }
         public int? StrengthDefenceAway { get; set; }
-        public double Form { get; set; }
+        public decimal Form { get; set; }
 
         public virtual TeamEntity Team { get; set; }
         public virtual EventEntity Event { get; set; }

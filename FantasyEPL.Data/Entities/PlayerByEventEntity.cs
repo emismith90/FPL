@@ -20,8 +20,8 @@ namespace FantasyEPL.Data.Entities
         public int NowCost { get; set; }
         public int ChanceOfPlayingThisRound { get; set; }
         public int ChanceOfPlayingNextRound { get; set; }
-        public double? ValueForm { get; set; }
-        public double? ValueSeason { get; set; }
+        public decimal? ValueForm { get; set; }
+        public decimal? ValueSeason { get; set; }
         public int? CostChangeStart { get; set; }
         public int? CostChangeEvent { get; set; }
         public int? CostChangeStartFall { get; set; }
@@ -30,8 +30,8 @@ namespace FantasyEPL.Data.Entities
         public bool? InDreamteam { get; set; }
         public int? DreamteamCount { get; set; }
 
-        public double SelectedByPercent { get; set; }
-        public double Form { get; set; }
+        public decimal SelectedByPercent { get; set; }
+        public decimal Form { get; set; }
 
         public int? TransfersOut { get; set; }
         public int? TransfersIn { get; set; }
@@ -44,10 +44,10 @@ namespace FantasyEPL.Data.Entities
 
         public int TotalPoints { get; set; }
         public int EventPoints { get; set; }
-        public double PointsPerGame { get; set; }
+        public decimal PointsPerGame { get; set; }
 
-        public double? EpThis { get; set; }
-        public double? EpNext { get; set; }
+        public decimal? EpThis { get; set; }
+        public decimal? EpNext { get; set; }
         public bool? Special { get; set; }
 
         public int Minutes { get; set; }
@@ -64,10 +64,10 @@ namespace FantasyEPL.Data.Entities
         public int Bonus { get; set; }
         public int BPS { get; set; }
 
-        public double Influence { get; set; }
-        public double Creativity { get; set; }
-        public double Threat { get; set; }
-        public double ICTIndex { get; set; }
+        public decimal Influence { get; set; }
+        public decimal Creativity { get; set; }
+        public decimal Threat { get; set; }
+        public decimal ICTIndex { get; set; }
         public int? EAIndex { get; set; }
 
         public virtual PlayerEntity Player { get; set; }

@@ -6,10 +6,10 @@ using FantasyEPL.Sync.Models;
 
 namespace FantasyEPL.Sync.Services
 {
-    public abstract class FPLDataProvider : IFPLDataProvider
+    public abstract class FPLDataProviderService : IFPLDataProviderService
     {
         private readonly JsonSerializerSettings Settings;
-        public FPLDataProvider()
+        public FPLDataProviderService()
         {
             Settings = new JsonSerializerSettings
             {
@@ -19,11 +19,11 @@ namespace FantasyEPL.Sync.Services
                 }
             };
         }
-        public async Task<Static> GetStaticData()
+        public async Task<Static> GetStaticDataAsync()
         {
             try
             {
-                var raw = await this.GetRawData();
+                var raw = await this.GetRawDataAsync();
 
                 return JsonConvert.DeserializeObject<Static>(raw, Settings);
             }
@@ -33,6 +33,6 @@ namespace FantasyEPL.Sync.Services
             }
         }
 
-        protected abstract Task<string> GetRawData();
+        protected abstract Task<string> GetRawDataAsync();
     }
 }

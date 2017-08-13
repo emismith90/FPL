@@ -4,16 +4,16 @@ using FantasyEPL.Sync.Configurations;
 
 namespace FantasyEPL.Sync.Services
 {
-    public class FileFPLDataProvider : FPLDataProvider, IFPLDataProvider
+    public class FileFPLDataProviderService : FPLDataProviderService, IFPLDataProviderService
     {
         public readonly IFileLocator Options;
 
-        public FileFPLDataProvider(IFileLocator options)
+        public FileFPLDataProviderService(IFileLocator options)
         {
             Options = options;
         }
 
-        protected override async Task<string> GetRawData()
+        protected override async Task<string> GetRawDataAsync()
         {
             try
             {

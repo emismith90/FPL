@@ -13,8 +13,7 @@ namespace FantasyEPL.Data.Migrations
                 name: "Events",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<int>(nullable: false),
                     AverageEntryScore = table.Column<int>(nullable: true),
                     DataChecked = table.Column<bool>(nullable: false, defaultValue: false),
                     DeadlineTime = table.Column<DateTime>(nullable: false),
@@ -37,8 +36,7 @@ namespace FantasyEPL.Data.Migrations
                 name: "Players",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<int>(nullable: false),
                     Code = table.Column<int>(nullable: false),
                     FirstName = table.Column<string>(type: "nchar(255)", maxLength: 255, nullable: true),
                     SecondName = table.Column<string>(type: "nchar(255)", maxLength: 255, nullable: true),
@@ -53,8 +51,7 @@ namespace FantasyEPL.Data.Migrations
                 name: "PlayerPositions",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<int>(nullable: false),
                     Name = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     ShortName = table.Column<string>(type: "nchar(10)", maxLength: 10, nullable: false)
                 },
@@ -67,8 +64,7 @@ namespace FantasyEPL.Data.Migrations
                 name: "Teams",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<int>(nullable: false),
                     Code = table.Column<int>(nullable: false),
                     Name = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     ShortName = table.Column<string>(type: "nchar(10)", maxLength: 10, nullable: false),
@@ -95,19 +91,19 @@ namespace FantasyEPL.Data.Migrations
                     CostChangeEventFall = table.Column<int>(nullable: true),
                     CostChangeStart = table.Column<int>(nullable: true),
                     CostChangeStartFall = table.Column<int>(nullable: true),
-                    Creativity = table.Column<double>(type: "decimal(7, 1)", nullable: false, defaultValue: 0.0),
+                    Creativity = table.Column<decimal>(type: "decimal(7, 1)", nullable: false, defaultValue: 0m),
                     DreamteamCount = table.Column<int>(nullable: true),
                     EAIndex = table.Column<int>(nullable: true),
-                    EpNext = table.Column<double>(type: "decimal(7, 1)", nullable: true),
-                    EpThis = table.Column<double>(type: "decimal(7, 1)", nullable: true),
+                    EpNext = table.Column<decimal>(type: "decimal(7, 1)", nullable: true),
+                    EpThis = table.Column<decimal>(type: "decimal(7, 1)", nullable: true),
                     EventId = table.Column<int>(nullable: false),
                     EventPoints = table.Column<int>(nullable: false, defaultValue: 0),
-                    Form = table.Column<double>(type: "decimal(7, 1)", nullable: false, defaultValue: 0.0),
+                    Form = table.Column<decimal>(type: "decimal(7, 1)", nullable: false, defaultValue: 0m),
                     GoalsConceded = table.Column<int>(nullable: false, defaultValue: 0),
                     GoalsScored = table.Column<int>(nullable: false, defaultValue: 0),
-                    ICTIndex = table.Column<double>(type: "decimal(7, 1)", nullable: false, defaultValue: 0.0),
+                    ICTIndex = table.Column<decimal>(type: "decimal(7, 1)", nullable: false, defaultValue: 0m),
                     InDreamteam = table.Column<bool>(nullable: true),
-                    Influence = table.Column<double>(type: "decimal(7, 1)", nullable: false, defaultValue: 0.0),
+                    Influence = table.Column<decimal>(type: "decimal(7, 1)", nullable: false, defaultValue: 0m),
                     LoanedIn = table.Column<int>(nullable: true),
                     LoanedOut = table.Column<int>(nullable: true),
                     LoansIn = table.Column<int>(nullable: true),
@@ -119,24 +115,24 @@ namespace FantasyEPL.Data.Migrations
                     PenaltiesMissed = table.Column<int>(nullable: false, defaultValue: 0),
                     PenaltiesSaved = table.Column<int>(nullable: false, defaultValue: 0),
                     PlayerId = table.Column<int>(nullable: false),
-                    PointsPerGame = table.Column<double>(type: "decimal(7, 1)", nullable: false, defaultValue: 0.0),
+                    PointsPerGame = table.Column<decimal>(type: "decimal(7, 1)", nullable: false, defaultValue: 0m),
                     PositionId = table.Column<int>(nullable: false),
                     RedCards = table.Column<int>(nullable: false, defaultValue: 0),
                     Saves = table.Column<int>(nullable: false, defaultValue: 0),
-                    SelectedByPercent = table.Column<double>(type: "decimal(7, 1)", nullable: false, defaultValue: 0.0),
+                    SelectedByPercent = table.Column<decimal>(type: "decimal(7, 1)", nullable: false, defaultValue: 0m),
                     Special = table.Column<bool>(nullable: true),
                     SquadNumber = table.Column<int>(nullable: false),
                     Status = table.Column<string>(nullable: false),
                     TeamCode = table.Column<int>(nullable: false),
                     TeamId = table.Column<int>(nullable: false),
-                    Threat = table.Column<double>(type: "decimal(7, 1)", nullable: false, defaultValue: 0.0),
+                    Threat = table.Column<decimal>(type: "decimal(7, 1)", nullable: false, defaultValue: 0m),
                     TotalPoints = table.Column<int>(nullable: false, defaultValue: 0),
                     TransfersIn = table.Column<int>(nullable: true),
                     TransfersInEvent = table.Column<int>(nullable: true),
                     TransfersOut = table.Column<int>(nullable: true),
                     TransfersOutEvent = table.Column<int>(nullable: true),
-                    ValueForm = table.Column<double>(type: "decimal(7, 1)", nullable: true),
-                    ValueSeason = table.Column<double>(type: "decimal(7, 1)", nullable: true),
+                    ValueForm = table.Column<decimal>(type: "decimal(7, 1)", nullable: true),
+                    ValueSeason = table.Column<decimal>(type: "decimal(7, 1)", nullable: true),
                     YellowCards = table.Column<int>(nullable: false, defaultValue: 0)
                 },
                 constraints: table =>
@@ -175,7 +171,7 @@ namespace FantasyEPL.Data.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     EventId = table.Column<int>(nullable: false),
-                    Form = table.Column<double>(type: "decimal(7, 1)", nullable: false, defaultValue: 0.0),
+                    Form = table.Column<decimal>(type: "decimal(7, 1)", nullable: false, defaultValue: 0m),
                     GameDraw = table.Column<int>(nullable: false, defaultValue: 0),
                     GameLoss = table.Column<int>(nullable: false, defaultValue: 0),
                     GamePlayed = table.Column<int>(nullable: false, defaultValue: 0),
